@@ -1,0 +1,93 @@
+.container_aside {
+    position: absolute;
+    display:flex;
+    width: 100px;
+    height: 100vh;
+    background: black;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    transform: translate(-100%);
+    animation: animacion-reverse .5s forwards;
+    /* transition: all 0.5s ease; */
+    
+}
+
+
+.container_aside_active {
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 30px;
+    width: 100px;
+    height: 100vh;
+    background: black;
+    color: white;
+    /* transition: all 0.5s ease; */
+    /* transform: -100%; */
+    /* agregar animacion */
+    animation: animacion .5s forwards;
+    /* transition: all 0.5s ease; */
+}
+
+.icono {
+    margin: 30px 10px 0px 10px;
+}
+
+.container_iconos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_iconos .iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.container_iconos .iconos:hover {
+    color: #000;
+    background: white;
+}
+
+@keyframes animacion {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacion-reverse {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 766px) {
+    .container {
+        display: none;
+    }
+}
+
